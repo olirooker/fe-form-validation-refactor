@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sign-up.css" />
+    <script src="sign-up.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Create an account</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div class="form-container">
+            <form class="signup-form" method="GET" action="/welcome.html" onsubmit="handleSubmit(event)">
+                <h1 class="heading">Create an account</h1>
+                <p class="subheading">Already have an account? <a href="#">Sign in</a> </p>
+
+                <label class="input-label">
+                    <p>Username</p>
+                    <p class="errorMessage" id="signup-username-error"></p>
+                    <input type="text" class="signup-input" name="username" required onblur="validateUsername(event)" />
+                    <div class="input-indicator"></div>
+                </label>
+
+                <label class="input-label">
+                    <p>First name</p>
+                    <p class="errorMessage" id="signup-firstName-error"></p>
+                    <input type="text" class="signup-input" name="firstname" required
+                        onkeyup="validateFirstName(event)" />
+                    <div class="input-indicator"></div>
+                </label>
+
+                <label class="input-label">
+                    <p>Last name</p>
+                    <p class="errorMessage" id="signup-lastName-error"></p>
+                    <input type="text" class="signup-input" name="lastname" required
+                        onkeyup="validateLastName(event)" />
+                    <div class="input-indicator"></div>
+                </label>
+
+                <label class="input-label">
+                    <p>Date of Birth</p>
+                    <p class="errorMessage" id="signup-dob-error"></p>
+                    <input type="date" class="signup-input" name="dob" required onblur="validateDob(event)" />
+                    <div class="input-indicator"></div>
+                </label>
+
+                <p class="consent">By clicking create account, I agree that I have read the <a href="#">Terms of Use</a>
+                    and <a href="#">Privacy Policy</a> </p>
+
+                <button type="submit" class="signup-submit">Create account</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
